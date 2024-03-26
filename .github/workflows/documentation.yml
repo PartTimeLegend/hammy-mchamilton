@@ -25,6 +25,7 @@ jobs:
 
       - name: Build documentation
         run: |
+          mkdir -p docs
           cd docs
           make html
 
