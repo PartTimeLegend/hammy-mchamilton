@@ -5,3 +5,4 @@ docs/* @HamHangOut/Documentation
 * @HamHangOut/Developers
 *.py @HamHangOut/Python
 requirements.txt @HamHangOut/Python
+deploy/terraform @HamHangOut/Terraform
