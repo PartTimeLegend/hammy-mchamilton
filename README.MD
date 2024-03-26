@@ -1,5 +1,7 @@
 # Hammy McHamilton Discord Quiz Bot
 
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+
 This is a Discord bot written in Python that hosts a quiz game with questions and answers on from the RSGB Amateur Radio Examination questions list. The bot randomly selects questions from a predefined quiz data set and prompts users to answer them within a specified time limit.
 
 ![.... --- .-- / -.. --- . ... / .- / -... .- ... - .- .-. -.. --..-- / --- .-. .--. .... .- -. --..-- / ... --- -. / --- ..-. / .- / .-- .... --- .-. . / .- -. -.. / .- / ... -.-. --- - ... -- .- -. --..-- / -.. .-. --- .--. .--. . -.. / .. -. / - .... . / -- .. -.. -.. .-.. . / --- ..-. / .- / ..-. --- .-. --. --- - - . -. / ... .--. --- - / .. -. / - .... . / -.-. .- .-. .. -... -... . .- -. / -... -.-- / .--. .-. --- ...- .. -.. . -. -.-. . --..-- / .. -- .--. --- ...- . .-. .. ... .... . -.. --..-- / .. -. / ... --.- ..- .- .-.. --- .-. / --. .-. --- .-- / ..- .--. / - --- / -... . / .- / .... . .-. --- / .- -. -.. / .- / ... -.-. .... --- .-.. .- .-. ..--..](docs/hammy.jpg?raw=true "Hammy McHamilton")
@@ -16,7 +18,7 @@ This is a Discord bot written in Python that hosts a quiz game with questions an
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/parttimelegend/hammy-mchamilton.git
+   git clone https://github.com/HamHangOut/hammy-mchamilton.git
    ```
 
 2. Navigate to the project directory:

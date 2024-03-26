@@ -23,7 +23,7 @@ variable "app_name" {
 
 variable "container" {
   type    = string
-  default = "parttimelegend/hammy-mchamilton:latest"
+  default = "HamHangOut/hammy-mchamilton:latest"
   description = "Container name"
 }
 
