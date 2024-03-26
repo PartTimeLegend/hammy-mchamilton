@@ -9,13 +9,13 @@ license:
   - any-glob-to-any-file: LICENSE
 docs:
 - changed-files:
-  - any-glob-to-any-file: ['docs/*', '**/*.md']
+  - any-glob-to-any-file: [docs/*, '*.md']
 python:
 - changed-files:
-  - any-glob-to-any-file: ['requirements.txt', '**/*.md']
+  - any-glob-to-any-file: [requirements.txt, '*.md']
 deploy:
 - changed-files:
-  - any-glob-to-any-file: ['deploy/*']
+  - any-glob-to-any-file: [deploy/*]
 terraform:
 - changed-files:
-  - any-glob-to-any-file: ['deploy/terraform/*']
+  - any-glob-to-any-file: [deploy/terraform/*]
