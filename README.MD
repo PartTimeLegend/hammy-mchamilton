@@ -1,6 +1,6 @@
 # Hammy McHamilton Discord Quiz Bot
 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md) [![Build and Publish Docker Image](https://github.com/HamHangOut/hammy-mchamilton/actions/workflows/docker.yml/badge.svg)](https://github.com/HamHangOut/hammy-mchamilton/actions/workflows/docker.yml) [![CodeQL](https://github.com/HamHangOut/hammy-mchamilton/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/HamHangOut/hammy-mchamilton/actions/workflows/github-code-scanning/codeql) [![Generate terraform docs](https://github.com/HamHangOut/hammy-mchamilton/actions/workflows/terraform-docs.yml/badge.svg)](https://github.com/HamHangOut/hammy-mchamilton/actions/workflows/terraform-docs.yml) [![gitleaks](https://github.com/HamHangOut/hammy-mchamilton/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/HamHangOut/hammy-mchamilton/actions/workflows/gitleaks.yml)
 
 This is a Discord bot written in Python that hosts a quiz game with questions and answers on from the RSGB Amateur Radio Examination questions list. The bot randomly selects questions from a predefined quiz data set and prompts users to answer them within a specified time limit.
 
