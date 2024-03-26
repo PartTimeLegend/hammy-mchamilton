@@ -1,0 +1,21 @@
+github:
+- changed-files:
+  - any-glob-to-any-file: .github/*
+docker:
+- changed-files:
+  - any-glob-to-any-file: Dockerfile
+license:
+- changed-files:
+  - any-glob-to-any-file: LICENSE
+docs:
+- changed-files:
+  - any-glob-to-any-file: ['docs/*', '**/*.md']
+python:
+- changed-files:
+  - any-glob-to-any-file: ['requirements.txt', '**/*.md']
+deploy:
+- changed-files:
+  - any-glob-to-any-file: ['deploy/*']
+terraform:
+- changed-files:
+  - any-glob-to-any-file: ['deploy/terraform/*']
