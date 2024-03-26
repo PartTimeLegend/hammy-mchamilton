@@ -36,7 +36,7 @@ No requirements.
 | <a name="input_app_service_sku_name"></a> [app\_service\_sku\_name](#input\_app\_service\_sku\_name) | The sku to use for the app service | `string` | `"P1v2"` | no |
 | <a name="input_container"></a> [container](#input\_container) | Container name | `string` | `"HamHangOut/hammy-mchamilton:latest"` | no |
 | <a name="input_container_registry"></a> [container\_registry](#input\_container\_registry) | Container registry URL | `string` | `"https://ghcr.io"` | no |
-| <a name="input_discord_token"></a> [discord\_token](#input\_discord\_token) | n/a | `string` | `"Discord oauth2 token. SENSITIVE."` | no |
+| <a name="input_discord_token"></a> [discord\_token](#input\_discord\_token) | Discord oauth2 token. SENSITIVE. | `string` | n/a | yes |
 | <a name="input_environment"></a> [environment](#input\_environment) | The environment to deploy this app service to e.g., dev, test, staging, prod. | `string` | n/a | yes |
 | <a name="input_keyvault_sku_name"></a> [keyvault\_sku\_name](#input\_keyvault\_sku\_name) | The SKU to use for the KeyVault | `string` | `"standard"` | no |
 | <a name="input_location"></a> [location](#input\_location) | The Azure location for deploying this this application to. | `string` | `"UK South"` | no |
