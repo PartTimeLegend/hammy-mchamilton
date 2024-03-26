@@ -13,7 +13,7 @@ jobs:
     env:
       BUILD_DATE: ${{ github.event.head_commit.timestamp }}
       IMAGE_NAME: hammy-mchamilton
-      REPO_OWNER: parttimelegend
+      REPO_OWNER: hamhangout
 
     steps:
       - name: Checkout code
