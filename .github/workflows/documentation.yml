@@ -27,7 +27,7 @@ jobs:
         run: |
           mkdir -p docs
           cd docs
-          make html
+          sphinx-build -M html ../ ./ -W --keep-going
 
       - name: Deploy documentation
         uses: peaceiris/actions-gh-pages@v3
