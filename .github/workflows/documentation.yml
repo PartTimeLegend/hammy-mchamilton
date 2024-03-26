@@ -27,7 +27,7 @@ jobs:
       - name: Build Sphinx documentation
         run: |
           sphinx-quickstart --quiet --sep --no-makefile --dot _ --suffix .rst --master index --ext-autodoc --ext-viewcode --ext-doctest docs --project "Hammy McHamilon" --author "Joshua Clarke and Antony Bailey"
-          mv README.md docs
+          mv README.MD docs
           sphinx-build -b html docs docs/_build
         working-directory: ${{ github.workspace }}
       - name: Deploy documentation
