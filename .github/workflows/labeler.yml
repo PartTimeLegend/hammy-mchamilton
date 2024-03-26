@@ -1,12 +1,13 @@
-name: "Pull Request Labeler"
+name: Pull Request Labeler
 on:
 - pull_request_target
 
 jobs:
   triage:
+    # trunk-ignore(checkov/CKV2_GHA_1)
     permissions:
-        contents: read
-        pull-requests: write
+      contents: read
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
     - uses: actions/labeler@v5
