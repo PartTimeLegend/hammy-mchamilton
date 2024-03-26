@@ -1,7 +1,7 @@
 *.md @HamHangOut/Documentation
 docs/* @HamHangOut/Documentation
-.github/workflows/* @HamHangOut/Developers/Github
+.github/workflows/* @HamHangOut/Github
 .github/FUNDING.yml @HamHangOut/Admins
 * @HamHangOut/Developers
-*.py @HamHangOut/Developers/Python
-requirements.txt @HamHangOut/Developers/Python
+*.py @HamHangOut/Python
+requirements.txt @HamHangOut/Python
