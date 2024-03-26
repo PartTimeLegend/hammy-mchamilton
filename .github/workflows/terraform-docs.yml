@@ -1,0 +1,21 @@
+name: Generate terraform docs
+on: 
+  pull_request:
+    paths:
+      - deploy/terraform/**
+jobs:
+  docs:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
+
+    - name: Render terraform docs inside the README.md and push changes back to PR branch
+      uses: terraform-docs/gh-actions@v1.1.0
+      with:
+        working-dir: ./deploy/terraform
+        output-file: README.MD
+        output-method: replace
+        git-push: "true"
