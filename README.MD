@@ -2,7 +2,7 @@
 
 This is a Discord bot written in Python that hosts a quiz game with questions and answers on from the RSGB Amateur Radio Examination questions list. The bot randomly selects questions from a predefined quiz data set and prompts users to answer them within a specified time limit.
 
-![Hammy McHamilton](docs/hammy.jpg?raw=true "Hammy McHamilton")
+![.... --- .-- / -.. --- . ... / .- / -... .- ... - .- .-. -.. --..-- / --- .-. .--. .... .- -. --..-- / ... --- -. / --- ..-. / .- / .-- .... --- .-. . / .- -. -.. / .- / ... -.-. --- - ... -- .- -. --..-- / -.. .-. --- .--. .--. . -.. / .. -. / - .... . / -- .. -.. -.. .-.. . / --- ..-. / .- / ..-. --- .-. --. --- - - . -. / ... .--. --- - / .. -. / - .... . / -.-. .- .-. .. -... -... . .- -. / -... -.-- / .--. .-. --- ...- .. -.. . -. -.-. . --..-- / .. -- .--. --- ...- . .-. .. ... .... . -.. --..-- / .. -. / ... --.- ..- .- .-.. --- .-. / --. .-. --- .-- / ..- .--. / - --- / -... . / .- / .... . .-. --- / .- -. -.. / .- / ... -.-. .... --- .-.. .- .-. ..--..](docs/hammy.jpg?raw=true "Hammy McHamilton")
 
 ## Features
 
