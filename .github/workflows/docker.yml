@@ -12,6 +12,7 @@ jobs:
     env:
       BUILD_DATE: ${{ github.event.head_commit.timestamp }}
       IMAGE_NAME: hammy-mchamilton
+      REPO_OWNER: parttimelegend
 
     steps:
       - name: Checkout code
@@ -31,12 +32,8 @@ jobs:
         id: generate_tag
         run: echo ::set-output name=tag::${GITHUB_RUN_NUMBER}
 
-      - name: Convert repository owner to lowercase
-        id: name
-        run: echo "::set-output name=repository_owner::${{ github.repository_owner.lowercase }}"
-
       - name: Build the Docker image
-        run: docker build --file Dockerfile --tag ghcr.io/${{ steps.name.outputs.repository_owner }}/${{ env.IMAGE_NAME }}:${{ steps.generate_tag.outputs.tag }} --tag ghcr.io/${{ steps.name.outputs.repository_owner }}/${{ env.IMAGE_NAME }}:latest --build-arg BUILD_DATE=${BUILD_DATE} .
+        run: docker build --file Dockerfile --tag ghcr.io/${{ env.REPO_OWNER }}/${{ env.IMAGE_NAME }}:${{ steps.generate_tag.outputs.tag }} --tag ghcr.io/${{ env.REPO_OWNER }}/${{ env.IMAGE_NAME }}:latest --build-arg BUILD_DATE=${BUILD_DATE} .
 
       - name: Push the Docker image to GitHub Container Registry
-        run: docker push ghcr.io/${{ steps.name.outputs.repository_owner }}/${{ env.IMAGE_NAME }}:${{ steps.generate_tag.outputs.tag }} && docker push ghcr.io/${{ steps.name.outputs.repository_owner }}/${{ env.IMAGE_NAME }}:latest
+        run: docker push ghcr.io/${{ env.REPO_OWNER }}/${{ env.IMAGE_NAME }}:${{ steps.generate_tag.outputs.tag }} && docker push ghcr.io/${{ env.REPO_OWNER }}/${{ env.IMAGE_NAME }}:latest
