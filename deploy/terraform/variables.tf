@@ -26,3 +26,18 @@ variable "container_registry" {
   type    = string
   default = "https://ghcr.io"
 }
+
+variable "os_type" {
+  type    = string
+  default = "Linux"
+}
+
+variable "app_service_sku_name" {
+  type    = string
+  default = "P1v2"
+}
+
+variable "keyvault_sku_name" {
+  type    = string
+  default = "standard"
+}
