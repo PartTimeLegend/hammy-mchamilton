@@ -12,7 +12,7 @@ variable "location" {
 variable "discord_token" {
   type      = string
   sensitive = true
-  default = "Discord oauth2 token. SENSITIVE."
+  description = "Discord oauth2 token. SENSITIVE."
 }
 
 variable "app_name" {
