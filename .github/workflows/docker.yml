@@ -3,15 +3,19 @@ name: Build and Publish Docker Image
 on:
   push:
     branches:
-      - master
+      - main  # Trigger the workflow on pushes to the main branch
 
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
 
+    env:
+      BUILD_DATE: ${{ github.event.head_commit.timestamp }}
+      IMAGE_NAME: hammy-mchamilton
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4  # Check out your repository's code
+        uses: actions/checkout@v2  # Check out your repository's code
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
@@ -23,22 +27,15 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate build date
-        id: build_date
-        run: echo "::set-output name=BUILD_DATE::$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+      - name: Generate build number tag
+        id: generate_tag
+        run: echo ::set-output name=tag::${GITHUB_RUN_NUMBER}
+
+      - name: Convert repository owner to lowercase
+        run: echo "::set-env name=REPOSITORY_OWNER::${{ github.repository_owner | lower }}"
 
       - name: Build the Docker image
-        run: |
-          docker build \
-            --file Dockerfile \
-            --tag ghcr.io/${{ github.repository_owner }}/hammy-mchamiton:${{ github.run_number }} \
-            --tag ghcr.io/${{ github.repository_owner }}/hammy-mchamilton:latest \
-            --build-arg BUILD_DATE=${{ steps.build_date.outputs.BUILD_DATE }} \
-            .
-        env:
-          BUILD_DATE: ${{ steps.build_date.outputs.BUILD_DATE }}
+        run: docker build --file Dockerfile --tag ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ env.IMAGE_NAME }}:${{ steps.generate_tag.outputs.tag }} --tag ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ env.IMAGE_NAME }}:latest --build-arg BUILD_DATE=${BUILD_DATE} .
 
       - name: Push the Docker image to GitHub Container Registry
-        run: |
-          docker push ghcr.io/${{ github.repository_owner }}/hammy-mchamilton:${{ github.run_number }}
-          docker push ghcr.io/${{ github.repository_owner }}/hammy-mchamilton:latest
+        run: docker push ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ env.IMAGE_NAME }}:${{ steps.generate_tag.outputs.tag }} && docker push ghcr.io/${{ env.REPOSITORY_OWNER }}/${{ env.IMAGE_NAME }}:latest
