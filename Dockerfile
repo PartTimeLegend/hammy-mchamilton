@@ -14,8 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 ENV PYTHONUNBUFFERED=1
 
 # Add standard labels
-LABEL maintainer="Joshua Clarke and Antony Bailey <antony.bailey@thepoliceoftheinter.net>"
-LABEL description="This is a Docker image for the Hammy McHamilton Discord Bot."
+LABEL org.opencontainers.image.maintainer="Joshua Clarke and Antony Bailey <antony.bailey@thepoliceoftheinter.net>"
+LABEL org.opencontainers.image.description DESCRIPTION="This is a Docker image for the Hammy McHamilton Discord Bot."
 LABEL org.opencontainers.image.created="$BUILD_DATE" 
 # docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') -t hammy-mchamilton .
 
