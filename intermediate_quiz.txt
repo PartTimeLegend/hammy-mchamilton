@@ -1,0 +1,6 @@
+What is the capital of France?|Paris
+What is the largest planet in our solar system?|Jupiter
+What is the powerhouse of the cell?|Mitochondria
+What is 2 + 2?|4
+What is the square root of 16?|4
+What is 10 multiplied by 3?|30
